@@ -21,13 +21,13 @@ export default function App() {
 
   function getUser(username: string) {
     fetch(`https://api.github.com/users/${username}`)
-    .then((res) => res.json())
+    .then(res => res.json())
     .then(data => setUser(data));
   }
-
-  useEffect(() => {
-    console.log(user);
-  }, [user]);
+  
+  // useEffect(() => {
+  //   console.log(user);
+  // }, [user]);
 
   return (
       <div className={darkMode ? "screen dark" : "screen"}>
@@ -41,7 +41,7 @@ export default function App() {
               name="search" 
               id="search" 
               placeholder="Buscar por username"
-              onBlur={(e) => getUser(e.target.value)}
+              // onBlur={(e) => getUser(e.target.value)}
             />
 
             <ul>
