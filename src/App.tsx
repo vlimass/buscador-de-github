@@ -41,7 +41,7 @@ export default function App() {
               name="search" 
               id="search" 
               placeholder="Buscar por username"
-              // onBlur={(e) => getUser(e.target.value)}
+              onBlur={(e) => getUser(e.target.value)}
             />
 
             <ul>
